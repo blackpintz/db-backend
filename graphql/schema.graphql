@@ -1,0 +1,26 @@
+type Art {
+    id: String
+    title: String!
+    quantity: String
+    network: String!
+    contractID: String!
+    asset: String!
+}
+
+type Query {
+    artList: [Art]
+}
+
+
+input CreateArtInput {
+    id: String
+    title: String!
+    quantity: String
+    network: String!
+    contractID: String!
+    asset: String!
+}
+
+type Mutation {
+    createArt(art: CreateArtInput!): Art
+}
